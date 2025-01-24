@@ -11,5 +11,5 @@ import { PickerComponent } from './picker/picker.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Builder';
+  title = 'Map builder';
 }

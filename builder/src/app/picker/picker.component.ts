@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { BrickComponent } from "../brick/brick.component";
 
 @Component({
   selector: 'app-picker',
-  imports: [],
+  imports: [BrickComponent],
   templateUrl: './picker.component.html',
   styleUrl: './picker.component.css'
 })

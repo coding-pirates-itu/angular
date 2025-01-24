@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'brick',
@@ -7,5 +7,10 @@ import { Component, signal } from '@angular/core';
   styleUrl: './brick.component.css'
 })
 export class BrickComponent {
-  face = signal("earth");
+  face = input();
+  selected = signal(false);
+
+  Select() {
+    this.selected = signal(true);
+  }
 }
