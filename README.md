@@ -21,6 +21,7 @@ ng new <app-name> # All defaults
 cd <app-name>
 
 ng g c <comp-name>
+ng g service <service-name>
 ```
 
 

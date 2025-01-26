@@ -1,8 +1,9 @@
 .brick-border {
-    border: 5px solid transparent;
+    border: 1px solid transparent;
     width: fit-content;
 }
 
 .brick-selected {
-    border-color: yellow;
+    border-color: black;
+    background-color: gray;
 }

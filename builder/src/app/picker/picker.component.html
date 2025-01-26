@@ -1,5 +1,5 @@
 <div class="brick-shelf">
-    @for (brick of ['soil', 'bush', 'plato', 'pond', 'grass', 'flower']; track $index) {
-        <brick face="{{brick}}"/>
+    @for (brick of selectedService.brickNames; track $index) {
+        <brick face="{{brick}}" [selected]="selectedService.isSelected.get(brick)"/>
     }
 </div>

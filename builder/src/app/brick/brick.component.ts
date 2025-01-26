@@ -1,4 +1,5 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, inject, input, InputSignal } from '@angular/core';
+import { BrickSelectionService } from '../services/brick-selection.service';
 
 @Component({
   selector: 'brick',
@@ -7,10 +8,11 @@ import { Component, input, signal } from '@angular/core';
   styleUrl: './brick.component.css'
 })
 export class BrickComponent {
-  face = input();
-  selected = signal(false);
+  selectedService = inject(BrickSelectionService);
+  face = input<string>();
+  selected = input<boolean>();
 
   Select() {
-    this.selected = signal(true);
+    this.selectedService.select(this.face()!);
   }
 }

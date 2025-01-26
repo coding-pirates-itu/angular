@@ -1,3 +1,3 @@
-<div [class]="'brick-border' + (selected() ? ' brick-selected' : '')">
+<div class="brick-border" [class.brick-selected]="selected()">
     <img width="32px" height="32px" src="/img/{{face()}}.png" (click)="Select()"/>
 </div>
