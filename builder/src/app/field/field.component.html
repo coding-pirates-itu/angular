@@ -1,1 +1,10 @@
-<p>field works!</p>
+<div class="field"
+     [style.grid-template-columns]="'repeat(' + this.fieldService.sizeX + ', 1fr)'"
+     [style.grid-template-rows]="'repeat(' + this.fieldService.sizeY + ', 1fr)'">
+
+    @for (brick of this.fieldService.map; track $index) {
+        <div class="cell" (click)="PutBrick($index)">
+            <brick face="{{brick}}"/>
+        </div>
+    }
+</div>

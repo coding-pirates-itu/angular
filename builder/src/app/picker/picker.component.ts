@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { BrickComponent } from "../brick/brick.component";
 import { BrickSelectionService } from '../services/brick-selection.service';
+import { BrickSelectorComponent } from "../brick-selector/brick-selector.component";
 
 @Component({
   selector: 'app-picker',
-  imports: [BrickComponent],
+  imports: [BrickSelectorComponent],
   templateUrl: './picker.component.html',
   styleUrl: './picker.component.css'
 })
