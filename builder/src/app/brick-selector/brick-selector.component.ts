@@ -10,10 +10,10 @@ import { BrickComponent } from "../brick/brick.component";
 })
 export class BrickSelectorComponent {
   selectedService = inject(BrickSelectionService);
-  face = input<string>();
+  face = input.required<string>();
   selected = input<boolean>();
 
   Select() {
-    this.selectedService.select(this.face()!);
+    this.selectedService.select(this.face());
   }
 }
